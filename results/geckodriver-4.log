@@ -1,0 +1,94 @@
+1736364766099	geckodriver	INFO	Listening on 127.0.0.1:59021
+1736364769181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59022" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dens\\AppData\\Local\\Temp\\rust_mozprofilevmp9Sz"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1736364769377	Marionette	INFO	Marionette enabled
+1736364769443	Marionette	INFO	Listening on port 59029
+WebDriver BiDi listening on ws://127.0.0.1:59022
+Read port: 59029
+1736364769542	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59022/devtools/browser/e0efa93c-366b-4675-8de9-908e56c50dd6
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 249 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://biblus.in."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://biblus.in."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 5686 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 6209 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/safeframe-bundles/0.83/1-1-0/render.html line 26 > injectedScript, line 28: Script terminated by timeout at:
+n@https://yastatic.net/safeframe-bundles/0.83/1-1-0/render.html line 26 > injectedScript:28:1222
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 4938 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 667 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 4787 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yandex.ru/ads/system/context.js, line 2: Script terminated by timeout at:
+42998/t.NG/r/<@https://yandex.ru/ads/system/context.js:2:111897
+r@https://yandex.ru/ads/system/context.js:2:111843
+o@https://yandex.ru/ads/system/context.js:2:111956
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 5878 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 6276 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202501060101/slotcar_library_fy2021.js?bust=31089586, line 129: Script terminated by timeout at:
+Ni/d<@https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202501060101/slotcar_library_fy2021.js?bust=31089586:129:375
+ua/</<@https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202501060101/slotcar_library_fy2021.js?bust=31089586:38:859
+U@https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202501060101/slotcar_library_fy2021.js?bust=31089586:38:680
+ua/<@https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202501060101/slotcar_library_fy2021.js?bust=31089586:38:849
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 3601 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 5513 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 7594 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 2127 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js, line 1: Script terminated by timeout at:
+Jr@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:237256
+n@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:205264
+ja@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:338032
+P@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:147855
+S@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:145427
+631/p/<@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:141333
+p@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:141230
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 1811 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript error: , line 0: NotAllowedError: The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ORxHnl3cHlB1TaITZFMr1qo3PR2OrDjKBQclyPUxaNk.js line 2 > eval line 227 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+1736364816491	Marionette	INFO	Stopped listening on port 59029
+JavaScript warning: https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js, line 1: Script terminated by timeout at:
+Wv/this.loop@https://yastatic.net/vas-bundles/1183803/bundles-es2017/loader.bundle.js:1:675054
+
+Dynamically enable window occlusion 1
+[GFX1-]: VideoBridgeParent receives IPC close with reason=AbnormalShutdown

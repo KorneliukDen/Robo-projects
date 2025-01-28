@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.8 on win32)" generated="2025-01-09T15:23:53.001436" rpa="false" schemaversion="5">
+<suite id="s1" name="Robo-projects" source="C:\Users\dens\Desktop\Robo-projects">
+<suite id="s1-s1" name="2Nd Project" source="C:\Users\dens\Desktop\Robo-projects\2nd_project">
+<suite id="s1-s1-s1" name="2Nd Project" source="C:\Users\dens\Desktop\Robo-projects\2nd_project\2nd_project.robot">
+<test id="s1-s1-s1-t1" name="Cheking log in &amp; books" line="10">
+<kw name="Precondition: Open Browser And Maximize" owner="web" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:23:53.205159" level="INFO">Opening browser 'ff' to base url 'https://biblus.in/'.</msg>
+<arg>url=${site_url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-09T15:23:53.205159" elapsed="7.476513"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-09T15:24:00.682811" elapsed="0.258398"/>
+</kw>
+<arg>site_url=https://biblus.in/</arg>
+<arg>browser=ff</arg>
+<doc>Open Browser And Maximize</doc>
+<status status="PASS" start="2025-01-09T15:23:53.204162" elapsed="7.737047"/>
+</kw>
+<kw name="Authorization" owner="biblus">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${MENU_BTN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:00.942262" elapsed="0.015915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:00.958177" level="INFO">Clicking element '//div[@id="header_menu"]'.</msg>
+<arg>locator=${MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:00.958177" elapsed="0.217093"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:04.249893" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-09T15:24:04.249893" level="FAIL">Element '//a[text()="Мой профиль"]' not visible after 3 seconds.</msg>
+<arg>locator=${MY_PROFILE_BTN}</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-09T15:24:01.176270" elapsed="3.075530">Element '//a[text()="Мой профиль"]' not visible after 3 seconds.</status>
+</kw>
+<msg time="2025-01-09T15:24:04.251800" level="INFO">${is_user_authorized} = False</msg>
+<var>${is_user_authorized}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>locator=${MY_PROFILE_BTN}</arg>
+<arg>timeout=3s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-09T15:24:01.176270" elapsed="3.075530"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_user_authorized}">
+<kw name="Login" owner="biblus">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:04.252890" level="INFO">Clicking element '//a[text()="Вход и регистрация"]'.</msg>
+<arg>locator=${TO_SING_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:04.252890" elapsed="1.459140"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:05.713030" level="INFO">Typing text 'd3n1@mail.ru' into text field '//input[@type="text"]'.</msg>
+<arg>locator=//input[@type="text"]</arg>
+<arg>text=%{LOGIN_BIBLUS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:05.712030" elapsed="0.025535"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:05.737565" level="INFO">Typing password into text field '//input[@type="password"]'.</msg>
+<msg time="2025-01-09T15:24:05.741565" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=//input[@type="password"]</arg>
+<arg>password=%{PASSWORD_BIBLUS}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:05.737565" elapsed="0.012557"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:05.750122" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<arg>locator=${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:05.750122" elapsed="1.837438"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:07.588561" level="INFO">Clicking element '//div[@id="header_menu"]'.</msg>
+<arg>locator=${MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:07.587560" elapsed="0.215711"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${MY_PROFILE_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:07.803271" elapsed="0.007218"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:07.811489" level="INFO">Clicking element '//a[text()="Выход из аккаунта"]'.</msg>
+<arg>locator=${LOG_OUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:07.810489" elapsed="1.794525"/>
+</kw>
+<doc>Log in &amp; Log out</doc>
+<status status="PASS" start="2025-01-09T15:24:04.251800" elapsed="5.353214"/>
+</kw>
+<status status="PASS" start="2025-01-09T15:24:04.251800" elapsed="5.353214"/>
+</branch>
+<status status="PASS" start="2025-01-09T15:24:04.251800" elapsed="5.353214"/>
+</if>
+<doc>authorization check</doc>
+<status status="PASS" start="2025-01-09T15:24:00.941209" elapsed="8.663805"/>
+</kw>
+<kw name="Book Author" owner="biblus">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:09.606019" level="INFO">Opening url 'https://biblus.in/authors/andrejj-krasnikov.html'</msg>
+<arg>url=https://biblus.in/authors/andrejj-krasnikov.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-09T15:24:09.606019" elapsed="1.845089"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${BOOKS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:11.451108" elapsed="0.011211"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:11.466693" level="INFO">@{books_list} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="dfcdc3d5-7be0-4c4e-9306-03703956285b")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<var>@{books_list}</var>
+<arg>locator=${BOOKS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:11.462319" elapsed="0.004374"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:11.466693" level="INFO">Executing JavaScript:
+window.scrollBy(0, window.innerHeight / 3)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, window.innerHeight / 3)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-09T15:24:11.466693" elapsed="0.004004"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:11.471698" elapsed="0.256407"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:11.734917" level="INFO">${name_book} = Темные боги. Вторжение</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:11.728105" elapsed="0.006812"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:11.735923" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="dfcdc3d5-7be0-4c4e-9306-03703956285b")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:11.734917" elapsed="0.284435"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.020352" elapsed="0.014418"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.035760" elapsed="0.223218"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:12.264980" level="INFO">${opened_name_book} = Темные боги. Вторжение</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.258978" elapsed="0.007003"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.265981" elapsed="0.000000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.266981" elapsed="0.013402"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.281872" elapsed="0.005141"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="dfcdc3d5-7be0-4c4e-9306-03703956285b")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:11.471698" elapsed="0.816315"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.288013" elapsed="0.283641"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:12.576662" level="INFO">${name_book} = Темные боги. Дорога тьмы</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.571654" elapsed="0.005008"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:12.577654" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="05228377-8df3-41e4-a9b2-1239eb444850")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.577654" elapsed="0.289280"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.868295" elapsed="0.013471"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:12.881766" elapsed="0.219577"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:13.109332" level="INFO">${opened_name_book} = Темные боги. Дорога тьмы</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.102333" elapsed="0.006999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.110332" elapsed="0.000000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.110332" elapsed="0.012000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.123332" elapsed="0.004002"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="05228377-8df3-41e4-a9b2-1239eb444850")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:12.288013" elapsed="0.840320"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.128333" elapsed="0.280753"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:13.413084" level="INFO">${name_book} = Федерация. Наблюдатель</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.409086" elapsed="0.004998"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:13.414084" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="c32b2c7f-a753-4538-b435-9d8bc9a82f55")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.414084" elapsed="0.283454"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.697538" elapsed="0.014338"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.711876" elapsed="0.215573"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:13.934460" level="INFO">${opened_name_book} = Федерация. Наблюдатель</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.927449" elapsed="0.008013"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.935462" elapsed="0.000990"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.936452" elapsed="0.013595"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.950047" elapsed="0.004108"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="c32b2c7f-a753-4538-b435-9d8bc9a82f55")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:13.128333" elapsed="0.826823"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:13.955156" elapsed="0.277283"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:14.239318" level="INFO">${name_book} = Темные боги. Черный апостол</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.232439" elapsed="0.006879"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:14.240318" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="f64805ff-e933-4781-ba74-e0f3cb992d2c")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.239318" elapsed="0.281461"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.521861" elapsed="0.014281"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.537396" elapsed="0.217108"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:14.764374" level="INFO">${opened_name_book} = Темные боги. Черный апостол</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.754504" elapsed="0.009870"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.765374" elapsed="0.000000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.766413" elapsed="0.010970"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.778374" elapsed="0.004172"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="f64805ff-e933-4781-ba74-e0f3cb992d2c")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:13.955156" elapsed="0.827390"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:14.782546" elapsed="0.274243"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:15.060799" level="INFO">${name_book} = Федерация. Артефакт</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.056789" elapsed="0.005012"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:15.061801" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="b8a80063-da6b-48f2-afdf-9928eb998917")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.061801" elapsed="0.285171"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.346972" elapsed="0.014681"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.361653" elapsed="0.417825"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:15.786969" level="INFO">${opened_name_book} = Федерация. Артефакт</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.780943" elapsed="0.007259"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.788202" elapsed="0.001003"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.789205" elapsed="0.009999"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.799204" elapsed="0.003858"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="b8a80063-da6b-48f2-afdf-9928eb998917")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:14.782546" elapsed="1.020516"/>
+</iter>
+<var>${book}</var>
+<value>@{books_list}[0:5]</value>
+<status status="PASS" start="2025-01-09T15:24:11.470697" elapsed="4.332365"/>
+</for>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:15.804061" level="INFO">Executing JavaScript:
+window.scrollBy(0, window.innerHeight / 1)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, window.innerHeight / 1)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.804061" elapsed="0.003353"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:15.807414" elapsed="0.274591"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:16.086773" level="INFO">${name_book} = Жатва</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.083009" elapsed="0.004777"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:16.087786" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="c7af9ef4-53e2-426d-9ee9-f2a793905cc9")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.087786" elapsed="0.280252"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.369039" elapsed="0.013290"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.383340" elapsed="0.215880"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:16.607950" level="INFO">${opened_name_book} = Жатва</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.600281" elapsed="0.007669"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.607950" elapsed="0.000000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.607950" elapsed="0.012435"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.621852" elapsed="0.004150"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="c7af9ef4-53e2-426d-9ee9-f2a793905cc9")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:15.807414" elapsed="0.818588"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.627072" elapsed="0.279806"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:16.911967" level="INFO">${name_book} = Темные боги. Шепот смерти</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.906878" elapsed="0.006093"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:16.912971" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="4480b5c1-78c2-4683-9487-03c80a909500")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:16.912971" elapsed="0.281848"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.194819" elapsed="0.012050"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.208331" elapsed="0.215825"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:17.439159" level="INFO">${opened_name_book} = Темные боги. Шепот смерти</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.424156" elapsed="0.015003"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.439159" elapsed="0.001172"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.440331" elapsed="0.013668"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.453999" elapsed="0.012201"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="4480b5c1-78c2-4683-9487-03c80a909500")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:16.626002" elapsed="0.840198"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.467214" elapsed="0.281393"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:17.753011" level="INFO">${name_book} = Шепот смерти</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.748607" elapsed="0.004404"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:17.754509" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="d42308f4-4f02-4c93-a2d4-8e421e1e0118")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:17.754509" elapsed="0.280585"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.036434" elapsed="0.014244"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.050678" elapsed="0.218422"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:18.276100" level="INFO">${opened_name_book} = Шепот смерти</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.269100" elapsed="0.007000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.277064" elapsed="0.001000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.278064" elapsed="0.014759"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.292823" elapsed="0.004982"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="d42308f4-4f02-4c93-a2d4-8e421e1e0118")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:17.466200" elapsed="0.831605"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.297805" elapsed="0.275698"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:18.578477" level="INFO">${name_book} = Темные боги. Отблеск величия</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.573503" elapsed="0.004974"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:18.579513" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="f3ed817d-3eb1-4b85-9481-c559bc723e9a")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.579513" elapsed="0.280711"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.860224" elapsed="0.014606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:18.874830" elapsed="0.218525"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:19.101361" level="INFO">${opened_name_book} = Темные боги. Отблеск величия</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.093355" elapsed="0.008006"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.101361" elapsed="0.000000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.102360" elapsed="0.009802"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.112162" elapsed="0.004494"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="f3ed817d-3eb1-4b85-9481-c559bc723e9a")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:18.297805" elapsed="0.818851"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=${book}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.116656" elapsed="0.281008"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:19.403672" level="INFO">${name_book} = Проводник душ</msg>
+<var>${name_book}</var>
+<arg>locator=${book}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.397664" elapsed="0.006008"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:19.404672" level="INFO">Clicking ['link', 'link'] '&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="ec95fa40-302b-4728-87c0-ec61e95cd9b8")&gt;' with CONTROL.</msg>
+<arg>locator=${book}</arg>
+<arg>modifier=CONTROL</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.403672" elapsed="0.281542"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.685214" elapsed="0.013792"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.699006" elapsed="0.215170"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-09T15:24:19.923411" level="INFO">${opened_name_book} = Проводник душ</msg>
+<var>${opened_name_book}</var>
+<arg>locator=${OPENED_BOOK}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.915176" elapsed="0.008235"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${name_book}</arg>
+<arg>second=${opened_name_book}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.924411" elapsed="0.000000"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.924411" elapsed="0.012448"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>locator=MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.936859" elapsed="0.003781"/>
+</kw>
+<var name="${book}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9554403c-6241-4e60-bfc4-92a412b2e69c", element="ec95fa40-302b-4728-87c0-ec61e95cd9b8")&gt;</var>
+<status status="PASS" start="2025-01-09T15:24:19.116656" elapsed="0.823984"/>
+</iter>
+<var>${book}</var>
+<value>@{books_list}[5:]</value>
+<status status="PASS" start="2025-01-09T15:24:15.807414" elapsed="4.133736"/>
+</for>
+<doc>checking that the correct book is opening</doc>
+<status status="PASS" start="2025-01-09T15:24:09.606019" elapsed="10.335131"/>
+</kw>
+<kw name="Postcondition: Close Browser" owner="web" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-09T15:24:19.941150" elapsed="2.644494"/>
+</kw>
+<doc>Close Browser</doc>
+<status status="PASS" start="2025-01-09T15:24:19.941150" elapsed="2.645451"/>
+</kw>
+<doc>Checking log in and opened books</doc>
+<status status="PASS" start="2025-01-09T15:23:53.203145" elapsed="29.383456"/>
+</test>
+<doc>Checking log in and opened books</doc>
+<status status="PASS" start="2025-01-09T15:23:53.019152" elapsed="29.568479"/>
+</suite>
+<status status="PASS" start="2025-01-09T15:23:53.017153" elapsed="29.571482"/>
+</suite>
+<status status="PASS" start="2025-01-09T15:23:53.003445" elapsed="29.586210"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robo-projects">Robo-projects</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="2Nd Project">Robo-projects.2Nd Project</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="2Nd Project">Robo-projects.2Nd Project.2Nd Project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

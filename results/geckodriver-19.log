@@ -1,0 +1,54 @@
+1736424995966	geckodriver	INFO	Listening on 127.0.0.1:56938
+1736424999046	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56939" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dens\\AppData\\Local\\Temp\\rust_mozprofileuwJEIa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1736424999236	Marionette	INFO	Marionette enabled
+1736424999306	Marionette	INFO	Listening on port 56947
+WebDriver BiDi listening on ws://127.0.0.1:56939
+Read port: 56947
+1736424999412	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56939/devtools/browser/9a1d9744-bdd3-417f-9ae3-e5a67d18dcd8
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-ZrLev80KaSl5LH5OCbnZGHu6yLSb3tRGuwaxGVnUsM.js line 2 > eval line 6650 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://biblus.in."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://biblus.in."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-ZrLev80KaSl5LH5OCbnZGHu6yLSb3tRGuwaxGVnUsM.js line 2 > eval line 1068 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-ZrLev80KaSl5LH5OCbnZGHu6yLSb3tRGuwaxGVnUsM.js line 2 > eval line 5519 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+JavaScript warning: https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js, line 2: Script terminated by timeout at:
+88725/<@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:35007
+r@https://yastatic.net/partner-code-bundles/1183758/bb9c7f5b5546bf5c4ad9.js:2:3995
+
+1736425020396	Marionette	INFO	Stopped listening on port 56947
+Dynamically enable window occlusion 1
