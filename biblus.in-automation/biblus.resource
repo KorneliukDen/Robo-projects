@@ -1,20 +1,3 @@
-#Привет!
-
-#biblus.resource:29:1 [W] 0503 Keyword 'Book Author' has too many keywords inside (27/10)
-# (too-many-calls-in-keyword) - Не понял как я одлжен это исправить 
-#biblus.resource:33:5 [W] 0909 The assignment sign is not consistent within the file.
-#  Expected '' but got '=' instead (inconsistent-assignment) - Здесь не понимаю почему это считается
-#  ошибкой. @{books_list}=    Get WebElements    locator=${BOOKS} - формируется список из названия книг
-
-
-#Слипы убрал, они здесь оказались не нужны.
-
-#Я пытался сделать все в один тест, но Data Driven никак не хотел работать вместе со всем остальным
-если подскажешь как это сделать буду благодарен
-
-#Было бы неплохо сделать обратную связь там куда мы сдаем работы, чтобы не писать это тут
-
-
 ** Settings ***
 Documentation   keywords for biblus.in
 Resource    ../web.resource
